@@ -1,10 +1,33 @@
-apiVersion: v1.27
+apiVersion: apps/v1.27
 kind: dev-webapp
 metadata:
-   name: dev-webapp
+  name: dev-webapp
 spec:
-   containers:
-   - name: prod-container01
-     image: dev-webapp
-     ports:
-     - containerPort: 6379
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dev-webapp
+  template:
+    metadata:
+      labels:
+        app: testserver
+    spec:
+      containers:
+        - name: dev-webapp
+          image: dev-webapp
+          ports:
+            - containerPort: 6379
+          env:
+          imagePullPolicy: Never
+---
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: dev-webapp
+spec:
+  selector:
+    app: dev-webapp
+  ports:
+    - port: 83
+      targetPort: 6379
+  type: LoadBalancer
