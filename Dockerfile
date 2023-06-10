@@ -7,4 +7,4 @@ ENTRYPOINT apachectl -D FOREGROUND
 EXPOSE 6379
 
 # Tell the image what command it has to execute as it starts as a container
-CMD ["webapp"]
+CMD ["dev-webapp"]
