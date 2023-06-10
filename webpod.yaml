@@ -1,10 +1,10 @@
 apiVersion: v1
-kind: Pod
+kind: webPod
 metadata:
-   name: redis-pod
+   name: webpod
 spec:
    containers:
-   - name: redis-container01
-     image: saravak/redis:latest
+   - name: prod-container01
+     image: dev-webapp:latest
      ports:
      - containerPort: 6379
