@@ -1,10 +1,10 @@
 apiVersion: v1
-kind: dev-webapp:latest
+kind: dev-webapp
 metadata:
-   name: dev-webapp:latest
+   name: dev-webapp
 spec:
    containers:
    - name: prod-container01
-     image: dev-webapp:latest
+     image: dev-webapp
      ports:
      - containerPort: 6379
