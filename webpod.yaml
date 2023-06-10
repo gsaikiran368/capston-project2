@@ -1,7 +1,7 @@
 apiVersion: v1
-kind: webPod
+kind: dev-webapp:latest
 metadata:
-   name: webpod
+   name: dev-webapp:latest
 spec:
    containers:
    - name: prod-container01
