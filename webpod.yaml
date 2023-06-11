@@ -21,7 +21,7 @@ spec:
           imagePullPolicy: Never
 ---
 apiVersion: apps/v1
-kind: Service
+kind: dev-wedapp
 metadata:
   name: dev-webapp
 spec:
