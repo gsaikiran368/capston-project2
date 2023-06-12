@@ -1,19 +1,19 @@
 apiVersion: apps/v1
-kind: dev-webapp
+kind: webapp
 metadata:
-  name: dev-webapp
+  name: webapp
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: dev-webapp
+      app: webapp
   template:
     metadata:
       labels:
-        app: testserver
+        app: webapp
     spec:
       containers:
-        - name: dev-webapp
+        - name: webapp
           image: httpd:latest
           ports:
             - containerPort: 6379
@@ -21,12 +21,12 @@ spec:
           imagePullPolicy: Never
 ---
 apiVersion: apps/v1
-kind: dev-wedapp
+kind: wedapp
 metadata:
-  name: dev-webapp
+  name: webapp
 spec:
   selector:
-    app: dev-webapp
+    app: webapp
   ports:
     - port: 83
       targetPort: 6379
