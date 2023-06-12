@@ -1,7 +1,10 @@
 apiVersion: apps/v1
-kind: webapp
+kind: Deployment
 metadata:
   name: webapp
+  lables:
+    app: webapp
+  
 spec:
   replicas: 2
   selector:
@@ -21,7 +24,7 @@ spec:
           imagePullPolicy: Never
 ---
 apiVersion: apps/v1
-kind: wedapp
+kind: Service
 metadata:
   name: webapp
 spec:
