@@ -30,7 +30,7 @@ spec:
   selector:
     app: webapp
   ports:
-    - port: 8081
+    - port: 8082
       targetPort: 80
   type: NodePort
   ports:
@@ -38,3 +38,19 @@ spec:
       protocol: TCP
       port: 8081           # this is service port 80
       targetPort: 80  
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          service:
+            name: webapp
+            port:
+              number: 8082
+        path: /
+        pathType: Prefix
