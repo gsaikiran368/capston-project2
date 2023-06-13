@@ -47,10 +47,10 @@ spec:
   rules:
   - http: http://65.2.183.202
       paths:
-      - backend:
-          service:
-            name: webapp
-            port:
-              number: 8082
+  - backend:
+      service:
+        name: webapp
+        port:
+        number: 8082
         path: /
         pathType: Prefix
