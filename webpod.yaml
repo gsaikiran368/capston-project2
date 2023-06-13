@@ -45,7 +45,7 @@ metadata:
   name: my-ingress
 spec:
   rules:
-  - http: http://65.2.183.202
+  - http:
       paths:
         - path: /
           pathType: Prefix
