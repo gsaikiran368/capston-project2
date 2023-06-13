@@ -7,7 +7,7 @@ COPY ./index.html ./images /usr/local/apache2/htdocs/
 #ADD . /var/www/html
 #ENTRYPOINT apachectl -D FOREGROUND
 # EXPOSE the port to the Host OS
-EXPOSE 80
+EXPOSE 8080
 
 # Tell the image what command it has to execute as it starts as a container
 #CMD ["dev-webapp"]
