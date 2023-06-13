@@ -46,11 +46,11 @@ metadata:
 spec:
   rules:
   - http: http://65.2.183.202
-      paths:
+    paths:
   - backend:
-      service:
-        name: webapp
-        port:
-        number: 8082
-        path: /
-        pathType: Prefix
+    service:
+    name: webapp
+    port:
+    number: 8082
+    path: /
+    pathType: Prefix
