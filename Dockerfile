@@ -14,7 +14,7 @@ ENTRYPOINT apachectl -D FOREGROUND
 #ADD . /var/www/html
 #ENTRYPOINT apachectl -D FOREGROUND
 # EXPOSE the port to the Host OS
-EXPOSE 8080
+EXPOSE 80
 
 # Tell the image what command it has to execute as it starts as a container
 #CMD ["dev-webapp"]
