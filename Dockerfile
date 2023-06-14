@@ -1,8 +1,13 @@
-FROM httpd
-COPY ./index.html /usr/local/apache2/htdocs/
-COPY /images /usr/local/apache2/htdocs/
-ENTRYPOINT apachectl -D FOREGROUND
+#FROM httpd
+#COPY ./index.html /usr/local/apache2/htdocs/
+#COPY /images /usr/local/apache2/htdocs/
+#ENTRYPOINT apachectl -D FOREGROUND
 
+FROM ubuntu 
+RUN apt-get update
+RUN apt-get install apache2 -y
+ADD . /var/www/html
+ENTRYPOINT apachectl -D FOREGROUND
 
 
 #FROM httpd 
