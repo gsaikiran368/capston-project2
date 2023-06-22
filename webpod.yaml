@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: webapp
-          image: httpd:2.4
+          image: saikirangowlikar/getting-started:httpd
           imagePullPolicy: Never
           ports:
             - containerPort: 80
