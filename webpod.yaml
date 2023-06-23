@@ -52,6 +52,6 @@ spec:
             service:
               name: webapp
               port:
-                number: 8082 
+               number: 8082
 
                 
