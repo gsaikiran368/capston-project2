@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
         - name: webapp
-          image: saikirangowlikar/getting-started:httpd
-          imagePullPolicy: Never
+          image: saikirangowlikar/getting-started:webapp
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
 ---
@@ -33,7 +33,7 @@ spec:
       targetPort: 80
   type: NodePort
   ports:
-    - name: http
+    - name: webapp
       protocol: TCP
       port: 8082           # this is service port 8082
       targetPort: 80
